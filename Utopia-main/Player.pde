@@ -583,7 +583,7 @@ class Player{
           drainRate *= 0.15 * trait.getMetabolicDrainMultiplier()*trait.getVisionHungerMultiplier();
         } else {
           // SPEED TRADE-OFF: Moving faster consumes proportionally more hunger
-          drainRate *= trait.getSpeedHungerMultiplier() * trait.getMetabolicDrainMultiplier()*trait.getStaminaHungerMultiplier();
+          drainRate *= trait.getSpeedHungerMultiplier() * trait.getMetabolicDrainMultiplier()*trait.getStaminaHungerMultiplier()*trait.getVisionHungerMultiplier();
         }
       }
       trait.priorities[i] = min(max(trait.priorities[i]-drainRate,PRIORITY_CAPS[i]),1.0);
@@ -819,7 +819,7 @@ class Player{
     
     // Check for all 3 flower species (0, 1, and 8)
     if(species == 0 || species == 1 || species == 8){
-      growth_speed = 0.01+elev_factor*overp_factor*daylight()*fert_factor;
+      growth_speed = 0.01+elev_factor*overp_factor*daylight()*fert_factor*trait.getMetabolicDrainMultiplier();
     }
     
     trait.size += growth_speed*random(0.001,0.002)*PRIORITY_RATES[species][0];
@@ -962,8 +962,7 @@ class Player{
         String parents = trait.name+" and "+target.trait.name;
 
         // FERTILITY MULTI-CHILD SPATIAL SPAWNING
-        float offspring = random(1,2);
-        int numOffspring = int(offspring);
+        int numOffspring = int(random(1, 3));
         for (int k = 0; k < numOffspring; k++) {
           float mutationChance = random(0,20); 
           int offspringSpecies = species;
@@ -1009,12 +1008,8 @@ class Player{
       if(trait.age >= (20000+trait.extraLifespan) * lifeMult){ 
         die(true);
       }
-    }else if(getSpeciesType(species) == 3){ 
-      if(trait.age >= (24000+trait.extraLifespan) * lifeMult){ 
-        die(true);
-      }
     }else if(getSpeciesType(species) == 0){
-      if(trait.age >= (12000+trait.extraLifespan) * lifeMult){ 
+      if(trait.age >= (10000+trait.extraLifespan) * lifeMult){ 
         die(true);
       }
     }
