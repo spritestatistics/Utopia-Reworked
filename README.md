@@ -25,7 +25,7 @@ Metabolism is pretty complicated so ill just summarize it. Higher metabolism inc
 This one is more simple. Increases or decreases the creature's vision by up/down 3 tiles. It may seem like a good idea to get vision, but more vision requires more energy, so it isnt that good when populations are high.
 
 **Fertility (or Freakyness if your Cary)**
-Increases or decreases freakiness urgency by up/down 20%. It may seem like the best idea to go with higher fertility, however, just know that when the population rises extremely quickly, consumer populations will fall aswell. (But I think that there will be a high fertility among most creatures if you manage to keep the ecosystem stable for a while, because they take shorter to reproduce meaning more high fertility creatures.
+Increases or decreases freakiness urgency by up/down 20%. however the higher fertility the more hunger you consume even when you arent moving. (up to 15% and vice versa)
 
 There could definitely be improvements to this system, I was also thinking about randomizing the stats between 0 and 1 among primordial species instead of 0.4 and 0.6, but I decided not to. You can change it if you want though (in Trait.pde).
 
@@ -33,6 +33,8 @@ Also, I used AI for a lot of the things I added, but just know that I have full 
 I do have some programming experience myself too.
 
 # Update Log
+**(1.1.a)**
+Fixed some bugs and made the default stats more coherent with genetic shift (predators can now keep up with the cows innovations, fertility now has an actual downside, stamina hunger growth factor now works properly. (before, creatures would just go as high stamina as possible to conserve energy as stamina didn't actually impact the speed, the speed stat impacted the stamina speed bonus))
 **The Biodiversity Update (1.1)**
 -Added genetic shift/natural selection
 -Added a third family of species
