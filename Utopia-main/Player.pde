@@ -580,7 +580,7 @@ class Player{
       }
       if(i == 0){
         if(!isExertingMotion()){
-          drainRate *= 0.15 * trait.getMetabolicDrainMultiplier();
+          drainRate *= 0.15 * trait.getMetabolicDrainMultiplier()*trait.getVisionHungerMultiplier();
         } else {
           // SPEED TRADE-OFF: Moving faster consumes proportionally more hunger
           drainRate *= trait.getSpeedHungerMultiplier() * trait.getMetabolicDrainMultiplier()*trait.getStaminaHungerMultiplier();
