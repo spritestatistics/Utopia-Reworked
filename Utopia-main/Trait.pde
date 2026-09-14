@@ -37,7 +37,7 @@ class Trait {
     } else {
       // Primordial population baseline
       for (int i = 0; i < 5; i++) {
-        stats[i] = random(0.4, 0.6);
+        stats[i] = random(0, 1); //randomly generated genetics
       }
     }
 
