@@ -71,15 +71,15 @@ float[] PRIORITY_CAPS = {0.0,0.0,0.2,0.5,0.0,0.0};
 // Each row is per species
 // Each element in row is per priority
 float[][] PRIORITY_RATES = {
-  {2.5,0,0,0,0,0},               // 0: Pink Flower
-  {2.5,0,0,0,0,0},            // 1: Ice Flower
-  {12.2, 4, 3.5, 0, 0, -72.5}, // 2: Yellow Cow
-  {12, 4.1, 3.4, 0, 0, -75},     // 3: Teal Cow
-  {11.9, 3.8, 2.9, 0, 0, -80},// 4: Orange Predator
-  {11.7, 3.7, 2.8, 0, 0, -82.5},  // 5: Blue Predator
-  {12.1, 4.0, 3.45, 0, 0, -74.0},// 6: Green Cow
-  {11.8, 3.75, 2.85, 0, 0,-81.25},//7: Green Predator
-  {2.51,0,0,0,0,0}             // 8: Green Flower, grows slightly faster than other flowers
+  {3,0,0,0,0,0},               // 0: Pink Flower
+  {3,0,0,0,0,0},            // 1: Ice Flower
+  {12.2, 4, 3.4, 0, 0, -72.5}, // 2: Yellow Cow
+  {12, 4.1, 3.3, 0, 0, -75},     // 3: Teal Cow
+  {12, 3.8, 3.1, 0, 0, -80},// 4: Orange Predator
+  {11.8, 3.7, 3, 0, 0, -82.5},  // 5: Blue Predator
+  {12.1, 4.0, 3.35, 0, 0, -74.0},// 6: Green Cow
+  {11.9, 3.75, 3.05, 0, 0,-81.25},//7: Green Predator
+  {3,0,0,0,0,0}             // 8: Green Flower, grows slightly faster than other flowers
 };
 
 // Species: [0:Pink, 1:Ice, 2:Yellow, 3:Teal, 4:Orange, 5:Blue, 6:GCow, 7:GPred, 8:GFlower]
