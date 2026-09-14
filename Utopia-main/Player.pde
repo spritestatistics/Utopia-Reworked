@@ -580,10 +580,10 @@ class Player{
       }
       if(i == 0){
         if(!isExertingMotion()){
-          drainRate *= 0.15 * trait.getMetabolicDrainMultiplier()*trait.getVisionHungerMultiplier();
+          drainRate *= 0.15 * trait.getMetabolicDrainMultiplier()*trait.getVisionHungerMultiplier() * trait.getFertilityHungerMultiplier();
         } else {
           // SPEED TRADE-OFF: Moving faster consumes proportionally more hunger
-          drainRate *= trait.getSpeedHungerMultiplier() * trait.getMetabolicDrainMultiplier()*trait.getStaminaHungerMultiplier()*trait.getVisionHungerMultiplier();
+          drainRate *= trait.getSpeedHungerMultiplier() * trait.getMetabolicDrainMultiplier()*trait.getStaminaHungerMultiplier()*trait.getVisionHungerMultiplier()*trait.getFertilityHungerMultiplier();
         }
       }
       trait.priorities[i] = min(max(trait.priorities[i]-drainRate,PRIORITY_CAPS[i]),1.0);
