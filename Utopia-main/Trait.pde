@@ -62,7 +62,7 @@ class Trait {
   // --- STAT GETTERS & SCALING ---
 // Stamina speed boost (+10% speed at 0, -10% top speed at 1.0)
   public float getStaminaSpeedMultiplier() {
-     return map(stats[0], 0.0, 1.0, 1.1, 0.9);
+     return map(stats[1], 0.0, 1.0, 1.1, 0.9);
   }
 
   // Stamina hunger modifier (+20% at 0.0, -20% at 1.0)
@@ -103,6 +103,10 @@ class Trait {
   
   public float getVisionHungerMultiplier() {
     return map(stats[3], 0.0, 1.0, 0.875, 1.125); //-12.5% hunger growth at 0, +12.5% hunger growth at 1
+  }
+  
+  public float getFertilityHungerMultiplier() {
+    return map(stats[4], 0.0, 1.0, 0.85, 1.15); //-15% hunger growth at 0, +15% hunger growth at 1
   }
   
   //Fertility increases freakyness growth rate by +20% at 1, and -20% at 0. High fertility has advantages but also disadvantages too.
