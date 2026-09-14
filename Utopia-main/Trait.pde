@@ -31,7 +31,7 @@ class Trait {
     // --- GENETIC DRIFT INHERITANCE ---
     if (parentStats != null) {
       for (int i = 0; i < 5; i++) {
-        float mutation = random(-0.075, 0.075); // +/- 7.5% drift
+        float mutation = random(-0.04, 0.04); // +/- 4% drift
         stats[i] = constrain(parentStats[i] + mutation, 0.0, 1.0);
       }
     } else {
