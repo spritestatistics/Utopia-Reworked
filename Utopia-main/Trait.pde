@@ -148,7 +148,7 @@ class Trait {
     }else if(getSpeciesType(species) == 2){
       lifespan = (extraLifespan+20000) * metaLifeMult;
     }else if(getSpeciesType(species) == 0){
-      lifespan = (extraLifespan+12000) * metaLifeMult;
+      lifespan = (extraLifespan+10000) * metaLifeMult;
     }
     String[] info = {"Creature #"+(id+1), "Generation "+(generation+1),
     "Birth weight: "+weightToString(bw),"Weight now: "+weightToString(priorities[0]),
