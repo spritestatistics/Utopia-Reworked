@@ -1,3 +1,0 @@
-// deprecated
-class Brain {
-}
