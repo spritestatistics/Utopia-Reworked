@@ -18,12 +18,12 @@ Once you have opened the project file, click "Run" and you should be running the
 # What is different? How to play?
 Controls: Press WASD + Space to move around. Press 'C' to have the camera start following the highlighted creature! (The one blinking white that is nearest to you.) Press 'V' to change whether to control creatures or not, default turned off
 
-Mutations have a 5% chance of appearing. Higher fertile lands = Faster plant growth, however lower fertile lands = slow plant growth. You can also play as the creatures, give it a try! (Except for the plants, but there's no reason to anyway) I also split the predator creature into 3 different species that eats one type of all cows. Cows and the predators can eat secondary or trinary foods that are not as appeasing to them, When eating secondary foods, creatures will only gain 75% of the calories, while eating trinary foods give only 50%, but they will prioritize primary foods first. (Omnivores? Prehaps!) (Apex predator? Prehaps!) Let me know what I should add!
+Mutations have a 4% chance of appearing among cows and 2% among flowers. Higher fertile lands = Faster plant growth, however lower fertile lands = slow plant growth. You can also play as the creatures, give it a try! (Except for the plants, but there's no reason to anyway) I also split the predator creature into 3 different species that eats one type of all cows. Cows and the predators can eat secondary or trinary foods that are not as appeasing to them, When eating secondary foods, creatures will only gain 75% of the calories, while eating trinary foods give only 50%, but they will prioritize primary foods first. (Omnivores? Prehaps!) (Apex predator? Prehaps!) Let me know what I should add!
 
 There also a third family now! I call it the "middle-grounds", where members of this family share traits from both the mountain family and the low-land family.
 
 I also implemented Genetic Shift! Heres how it works:
-There are 5 stats, Speed, Stamina, Metabolism, Vision, and Fertility. Each creature will have these stats ranging from 0-1. When the simulation first starts, the creatures that are generated will have their stats randomly generated between 0.4 and 0.6 for each stat. When a new creature is born, they will mutate +/- 0 to 0.075 stat points for each stat, the stats chosen to mutate from is the mean of the stats of the 2 parents. I only added 5 stats for simplicity, but they do serve some major purposes:
+There are 5 stats, Speed, Stamina, Metabolism, Vision, and Fertility. When the simulation first starts, the creatures that are generated will have their stats randomly generated between 0.4 and 0.6 for each stat. When a new creature is born, they will mutate +/- 0 to 0.05 stat points for each stat, the stats chosen to mutate from is the mean of the stats of the 2 parents. I only added 5 stats for simplicity, but they do serve some major purposes (may add more in the future):
 
 **Speed**
 A higher speed stat corresponds to more speed. You can get up to +10% more speed at max 1 or -10% less speed at the minimum 0, which can make finding faraway food, running/catching predators/prey easier! However, running faster leads to burning energy faster, so a creature burns energy 30% faster when running when this stat is max, and 30% slower when this stat is at 0.
@@ -49,13 +49,3 @@ I do have some programming experience myself too.
 -Mutation chances risen (1/25 for cow mutation, 1/50 for flower mutation)
 -All carnivores are mixed and now the red predators are back
 -Changed some of the stats and added a cap for Flee Monsters at 90% priority (if a creature wants something so badly, then they will now just go for it even if it means risking their life for it because they will die either way)
-**(1.1.b)**
--Changed randomized starting genetics back to between 0.4 and 0.6. (its to clearly see what direction creatures shift towards better)
--Nerfed high speed builds (+15% makes catching/easier prey/predators much easier for example)
--Changed some stats
-Last update until next major update!
-**(1.1.a)**
-Fixed some bugs and made the default stats more coherent with genetic shift (predators should now keep up better with the cows innovations, fertility now has an actual downside, stamina hunger growth factor now works properly. (before, creatures would just go as high stamina as possible to conserve energy as stamina didn't actually impact the speed, the speed stat impacted the stamina speed bonus))
-**The Biodiversity Update (1.1)**
--Added genetic shift/natural selection
--Added a third family of species
